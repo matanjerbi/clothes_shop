@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from sqlalchemy.exc import SQLAlchemyError
 from config.sql_config import get_db
 from models.users import insert_user, check_if_email_exsist
-from rabbit.basic_rabbit import publish_to_queue
+from rabbit.exchange import publish_to_queue
 
 app = Flask(__name__)
 
